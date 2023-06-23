@@ -53,7 +53,7 @@ class colaMonitor():
 
     def _extraerLista(self, lista, num_items):
         with self._mutex:
-            for k in range (num_items):
+            for _ in range (num_items):
                 lista.append(self._extraer())
 
 
