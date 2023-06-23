@@ -12,14 +12,11 @@ class energiaMonitor():
     # Variables locales (privadas) o permanentes (static) - Recursos
     _energia = 0
     _mutex = threading.RLock()
-    _numMedidores = 0
     _maxMedidores = threading.Condition(_mutex)
     _hilosMidiendo = []
-    _ultimoHilo = 0
     # Código de Inicialización (constructor)
     def __init__(self, energia_inicial = 0):
         self._energia = energia_inicial
-        self._estoyMidiendo = False
 
 # Procedimientos Internos (privados) - Todos con exclusión mútua (synchronized)
 
